@@ -1175,6 +1175,21 @@ fbq('track', 'ViewContent', {
         }else{
           attemptedOrder.posted=true;
           await submitToSheet(payload);
+          // Track an unverified order-form submission attempt, not a confirmed order.
+          // With no-cors, a resolved fetch cannot confirm storage in Google Sheets.
+          try {
+            if (typeof fbq === 'function') {
+              fbq('track', 'Lead', {
+                content_name: 'WOODELA DOCK',
+                content_type: 'product',
+                lead_stage: 'form_posted_unverified',
+                value: UNIT_PRICE * payload.quantity,
+                currency: 'EGP'
+              }, { eventID: payload.order_id });
+            }
+          } catch (trackingError) {
+            console.warn('Meta Lead tracking unavailable', trackingError);
+          }
           // The no-cors response is opaque; present a pending status, not "confirmed".
           displaySubmitted(payload);
         }
