@@ -267,7 +267,10 @@ body,button,input,textarea{font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-
 .heroimage .tag{bottom:12px;right:7px}
 .product-details-link{width:100%;font-family:inherit;cursor:pointer}
 .viewer-description{max-width:420px;font-size:13px;line-height:1.8;color:#62564b;margin:8px 0 0}
-.viewer-dimensions{max-width:420px;font-size:12px;line-height:1.7;color:#7c6e60;margin:7px 0 0}
+.product-dimensions{margin:4px 0 8px;padding:5px 8px;border-inline-start:2px solid #b99876;background:#f8f4ee;color:#5f4b39;font-size:.75rem;line-height:1.6}
+.product-dimensions > span{display:block}
+.product-dimensions bdi{white-space:nowrap;font-weight:700}
+.viewer-dimensions{max-width:420px;font-size:12px;line-height:1.7;color:#695a4c;margin:7px 0 0}
 .whatsapp-fab{position:fixed;z-index:26;right:17px;bottom:18px;display:flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:10px 16px;border-radius:999px;background:#137e51;color:#fff!important;font-size:13px;font-weight:800;box-shadow:0 8px 26px #113d2c3d;transition:transform .15s ease,background .15s}
 .whatsapp-fab:hover{background:#0b6641;transform:translateY(-2px)}
 .whatsapp-fab svg{flex:none}
@@ -528,7 +531,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 <section class="store-faq" id="help" aria-labelledby="help-title">
   <div class="eyebrow">قبل ما تطلب</div><h2 id="help-title">أسئلة مهمة عن الشراء</h2>
   <div class="faq-grid">
-    <div class="faq-item"><h3>إزاي أعرف مقاس المنتج؟</h3><p>اسألنا عن اسم المنتج عبر خدمة العملاء، وهنأكد المقاس والتفاصيل قبل ما تطلب من الموقع.</p></div>
+    <div class="faq-item"><h3>إزاي أعرف مقاس المنتج؟</h3><p>المقاسات المتاحة موجودة على بطاقات المنتجات وفي تفاصيلها. لو المقاس غير مذكور، تواصل مع خدمة العملاء قبل الطلب.</p></div>
     <div class="faq-item"><h3>إزاي بيتم الدفع والشحن؟</h3><p>الدفع عند الاستلام. الشحن 60 جنيه إذا إجمالي المنتجات أقل من 1000 جنيه، ومجاني بدءًا من 1000 جنيه. بنأكد التوفر وموعد التوصيل قبل تجهيز الطلب.</p></div>
     <div class="faq-item"><h3>ولو المنتج فيه مشكلة عند الاستلام؟</h3><p>تواصل معانا على واتساب أو البريد الإلكتروني. حقوقك في الاستبدال والاسترجاع محفوظة وفق القانون المصري. <a href="#policies">اطّلع على السياسة بالتفصيل</a>.</p></div>
   </div>
@@ -586,7 +589,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   <button type="button" class="viewer-close" id="closeProductPreview" aria-label="إغلاق معاينة الصورة">×</button>
   <div class="viewer-image-wrap"><button type="button" class="viewer-arrow viewer-prev" id="previewPrev" aria-label="الصورة السابقة" hidden>‹</button><img id="previewPhoto" alt="" /><button type="button" class="viewer-arrow viewer-next" id="previewNext" aria-label="الصورة التالية" hidden>›</button></div>
   <div class="viewer-thumbs" id="viewerThumbs" aria-label="صور المنتج الأخرى"></div>
-  <div class="viewer-details"><div><h2 id="previewName"></h2><p class="viewer-description" id="previewDescription"></p><p class="viewer-dimensions" id="previewDimensions"></p></div><div><div class="viewer-price" id="previewPrice"></div><button type="button" class="viewer-add" id="addPreviewToCart">+ أضف للسلة</button></div></div>
+  <div class="viewer-details"><div><h2 id="previewName"></h2><p class="viewer-description" id="previewDescription"></p><div class="viewer-dimensions" id="previewDimensions"></div></div><div><div class="viewer-price" id="previewPrice"></div><button type="button" class="viewer-add" id="addPreviewToCart">+ أضف للسلة</button></div></div>
 </dialog>
 
 <button class="floating" id="floatingCart" type="button" aria-label="فتح سلة التسوق">
@@ -624,6 +627,30 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 const PRODUCTS=[{"id":"metal-duo","name":"طقم صواني بمقابض معدنية","category":"صواني","price":549,"description":"طقم صواني بإطار من خشب الزان الروماني ومقابض معدنية؛ مناسب لتقديم القهوة والحلويات وترتيب الضيافة.","image":"assets/products/metal-duo-4bae5b221f6b.webp","tag":"طقم تقديم","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":545,"height":426,"product_count":"طقم صينيتين"},{"id":"snack-four","name":"علبة تسالي 4 أقسام","category":"تسالي","price":649,"description":"علبة تسالي من خشب الزان الروماني بأربعة أقسام وغطاء أكريليك شفاف مستورد؛ لتنظيم المكسرات والحلوى عند التقديم.","image":"assets/products/snack-four-57b720494f60.webp","tag":"4 أقسام","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":526,"height":286,"product_count":"4 أقسام"},{"id":"leaf-duo","name":"طقم صواني بنقشة أوراق","category":"صواني","price":599,"description":"طقم صواني بإطار من خشب الزان الروماني وتفاصيل بنقشة أوراق؛ لتقديم المشروبات والحلويات بشكل مرتب.","image":"assets/products/leaf-duo-2610c412e016.webp","tag":"نقشة أوراق","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":1254,"height":1254,"product_count":"طقم صينيتين"},{"id":"woodgrain-duo","name":"طقم صواني بعروق خشب","category":"صواني","price":549,"description":"طقم صواني من خشب الزان الروماني بتفاصيل تحاكي عروق الخشب، مناسب للضيافة والهدايا.","image":"assets/products/woodgrain-duo-9f01525f6393.webp","tag":"عروق خشب","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":549,"height":615,"product_count":"طقم صينيتين"},{"id":"melamine-ornate","name":"طقم صواني أرابيسك","category":"صواني","price":589,"description":"طقم صواني بإطار من خشب الزان الروماني وزخارف أرابيسك مفرغة تضيف طابعًا شرقيًا للتقديم.","image":"assets/products/melamine-ornate-48d0a3778d70.webp","tag":"أرابيسك","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":551,"height":585,"product_count":"طقم صينيتين"},{"id":"rope-handle","name":"طقم صواني بمقابض حبل","category":"صواني","price":599,"description":"طقم صواني بإطار من خشب الزان الروماني ومقابض بتفاصيل حبل؛ مناسب لضيافة المنزل.","image":"assets/products/rope-handle-ea5bd8e4dbc0.webp","tag":"مقابض حبل","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":1254,"height":1254,"product_count":"طقم صينيتين"},{"id":"steel-pattern","name":"طقم صواني هندسي","category":"صواني","price":619,"description":"طقم صواني بإطار من خشب الزان الروماني ونقشة هندسية مميزة؛ للتقديم أو كقطعة ديكور.","image":"assets/products/steel-pattern-935e39651fdd.webp","tag":"نقشة هندسية","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":550,"height":578,"product_count":"طقم صينيتين"},{"id":"breakfast-mosaic","name":"صينية موزاييك","category":"صواني","price":579,"description":"صينية تقديم واحدة بإطار من خشب الزان الروماني وتفاصيل موزاييك خشبية؛ للتقديم اليومي.","image":"assets/products/breakfast-mosaic-691bf92210da.webp","tag":"سطح موزاييك","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":544,"height":535,"product_count":"صينية واحدة"},{"id":"breakfast-metal","name":"صينية فطار بمقابض معدنية","category":"صواني","price":479,"description":"صينية تقديم واحدة من خشب الزان الروماني بمقابض معدنية؛ للفطار والمشروبات والضيافة.","image":"assets/products/breakfast-metal-ae7193e4e822.webp","tag":"صينية واحدة","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":544,"height":514,"product_count":"صينية واحدة"},{"id":"snack-small","name":"علبة تسالي صغيرة بغطاء شفاف","category":"تسالي","price":429,"description":"علبة تسالي صغيرة بثلاثة أقسام من خشب الزان الروماني، مع غطاء أكريليك شفاف مستورد منزلق.","image":"assets/products/snack-small-2e0017a86774.webp","tag":"غطاء شفاف","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":1381,"height":1139,"product_count":"3 أقسام"},{"id":"tissues","name":"حامل مناديل خشبي","category":"إكسسوارات","price":349,"description":"حامل رول مناديل من خشب الزان الروماني بتفصيلة زهرة خشبية؛ لمسة بسيطة للمطبخ أو ركن القهوة.","image":"assets/products/tissues-07f6f9f8208b.webp","tag":"حامل رول","gallery":[],"dimensions_note":"المقاسات الدقيقة متاحة عند الاستفسار قبل إتمام الطلب.","width":548,"height":642,"product_count":"حامل واحد"}];
+// Source: El Saudi catalogue, 28 March 2026, using the owner-approved WOODELA photo crosswalk.
+// Comments identify El Saudi item numbers. Dimensions are in centimetres, longest side first.
+const PRODUCT_DIMENSIONS = {
+  'breakfast-mosaic': [[62, 37]], // 8
+  'breakfast-metal': [[62, 37]], // 9
+  'metal-duo': [[42, 29], [33, 22]], // 6
+  'rope-handle': [[42, 29], [33, 22]], // 1
+  'leaf-duo': [[44, 31], [35, 24]], // 3
+  'woodgrain-duo': [[42, 29], [33, 22]], // 5
+  'melamine-ornate': [[44, 31], [35, 24]], // 3
+  'steel-pattern': [[42, 29], [33, 22]], // 4
+  'snack-four': [[31, 31]], // 33
+  'snack-small': [[31, 16]], // 35
+};
+// El Saudi item 28 lists no dimensions for the tissue-holder reference.
+function renderDimensions(productId) {
+  const dimensions = PRODUCT_DIMENSIONS[productId];
+  if (!dimensions) return '';
+  const labels = dimensions.length === 2 ? ['الكبيرة', 'الصغيرة'] : ['المقاس'];
+  const lines = dimensions.map(([length, width], index) =>
+    `<span>${labels[index]} <bdi dir="ltr">${length} × ${width}</bdi> سم</span>`
+  );
+  return `<div class="product-dimensions" aria-label="مقاسات المنتج">${lines.join('')}</div>`;
+}
 const HIGHLIGHTS=new Set(['metal-duo','snack-four','leaf-duo']);
 const SHIPPING_FEE=60;
 const FREE_SHIPPING_FROM=1000;
@@ -677,7 +704,7 @@ try{const stored=JSON.parse(localStorage.getItem('woodela_home_cart')||'{}');for
 function save(){try{localStorage.setItem('woodela_home_cart',JSON.stringify(cart));}catch(e){}}
 function toast(s){$('toast').textContent=s;$('toast').classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.remove('show'),2500)}
 function visibleProducts(){const q=$('search').value.trim().toLocaleLowerCase('ar');return PRODUCTS.filter(p=>(category==='الكل'||p.category===category) && (!q||p.name.toLocaleLowerCase('ar').includes(q)||p.description.toLocaleLowerCase('ar').includes(q)));}
-function renderProducts(){const list=visibleProducts();const grid=$('productsGrid');grid.replaceChildren();for(let p of list){let card=document.createElement('article');card.className='product'+(HIGHLIGHTS.has(p.id)?' product-highlight':'');card.innerHTML=`<div class="photo"><button type="button" class="photo-open" aria-label="تكبير صورة ${p.name}"><img alt="${p.name}" loading="lazy" decoding="async" width="${p.width||600}" height="${p.height||540}" src="${p.image}"><span class="zoom-hint">⤢ تكبير الصورة</span></button><span class="flag">${p.tag}</span></div><div class="productbody"><div class="cat">${p.category}</div><h3>${p.name}</h3><p class="product-count"><span>✓</span> ${p.product_count}</p><p class="desc">${p.description}</p><div class="price-row"><span class="price">${new Intl.NumberFormat('en-US').format(p.price)}</span><span class="egp">جنيه</span></div>${p.id==='metal-duo'?'<button class="product-details-link" type="button">تفاصيل الطقم والصور <span aria-hidden="true">←</span></button>':''}<button class="add" type="button">أضف للسلة <span aria-hidden="true">＋</span></button></div>`;card.querySelector('.add').addEventListener('click',()=>addItem(p.id));card.querySelector('.photo-open').addEventListener('click',()=>openProductPreview(p));const detailsBtn=card.querySelector('.product-details-link');if(detailsBtn)detailsBtn.addEventListener('click',()=>openProductPreview(p));grid.appendChild(card)}if(!list.length){grid.innerHTML='<div class="noresults">لا توجد منتجات مطابقة لبحثك.</div>';}}
+function renderProducts(){const list=visibleProducts();const grid=$('productsGrid');grid.replaceChildren();for(let p of list){let card=document.createElement('article');card.className='product'+(HIGHLIGHTS.has(p.id)?' product-highlight':'');card.innerHTML=`<div class="photo"><button type="button" class="photo-open" aria-label="تكبير صورة ${p.name}"><img alt="${p.name}" loading="lazy" decoding="async" width="${p.width||600}" height="${p.height||540}" src="${p.image}"><span class="zoom-hint">⤢ تكبير الصورة</span></button><span class="flag">${p.tag}</span></div><div class="productbody"><div class="cat">${p.category}</div><h3>${p.name}</h3><p class="product-count"><span>✓</span> ${p.product_count}</p>${renderDimensions(p.id)}<p class="desc">${p.description}</p><div class="price-row"><span class="price">${new Intl.NumberFormat('en-US').format(p.price)}</span><span class="egp">جنيه</span></div>${p.id==='metal-duo'?'<button class="product-details-link" type="button">تفاصيل الطقم والصور <span aria-hidden="true">←</span></button>':''}<button class="add" type="button">أضف للسلة <span aria-hidden="true">＋</span></button></div>`;card.querySelector('.add').addEventListener('click',()=>addItem(p.id));card.querySelector('.photo-open').addEventListener('click',()=>openProductPreview(p));const detailsBtn=card.querySelector('.product-details-link');if(detailsBtn)detailsBtn.addEventListener('click',()=>openProductPreview(p));grid.appendChild(card)}if(!list.length){grid.innerHTML='<div class="noresults">لا توجد منتجات مطابقة لبحثك.</div>';}}
 
 let activePreviewProduct=null;
 let activePreviewIndex=0;
@@ -695,7 +722,7 @@ function showPreviewImage(i){
 function openProductPreview(p){
   activePreviewProduct=p;
   woodelaTrack('ViewContent',{content_ids:[p.id],content_type:'product',value:p.price,currency:'EGP'});
-  $('previewName').textContent=p.name+' — '+p.product_count;$('previewDescription').textContent=p.description;$('previewDimensions').textContent='للاستفسار عن المقاس، تواصل مع خدمة عملاء WOODELA.';
+  $('previewName').textContent=p.name+' — '+p.product_count;$('previewDescription').textContent=p.description;$('previewDimensions').innerHTML=renderDimensions(p.id)||'المقاس غير مذكور. تواصل مع خدمة عملاء WOODELA للاستفسار.';
   $('previewPrice').textContent=fmt(p.price);
   showPreviewImage(0);
   const dlg=$('productLightbox');
