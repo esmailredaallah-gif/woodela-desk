@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://woodela.com/</loc></url>
-  <url><loc>https://woodela.com/products/metal-duo.html</loc></url>
-  <url><loc>https://woodela.com/products/snack-four.html</loc></url>
-  <url><loc>https://woodela.com/products/leaf-duo.html</loc></url>
-  <url><loc>https://woodela.com/products/woodgrain-duo.html</loc></url>
-  <url><loc>https://woodela.com/products/melamine-ornate.html</loc></url>
-  <url><loc>https://woodela.com/products/rope-handle.html</loc></url>
-  <url><loc>https://woodela.com/products/steel-pattern.html</loc></url>
-  <url><loc>https://woodela.com/products/breakfast-mosaic.html</loc></url>
-  <url><loc>https://woodela.com/products/breakfast-metal.html</loc></url>
-  <url><loc>https://woodela.com/products/snack-small.html</loc></url>
-  <url><loc>https://woodela.com/products/tissues.html</loc></url>
+  <url><loc>https://woodela.com/products/metal-duo.html</loc><image:image><image:loc>https://woodela.com/assets/products/metal-duo-4bae5b221f6b.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/snack-four.html</loc><image:image><image:loc>https://woodela.com/assets/products/snack-four-57b720494f60.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/leaf-duo.html</loc><image:image><image:loc>https://woodela.com/assets/products/leaf-duo-2610c412e016.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/woodgrain-duo.html</loc><image:image><image:loc>https://woodela.com/assets/products/woodgrain-duo-9f01525f6393.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/melamine-ornate.html</loc><image:image><image:loc>https://woodela.com/assets/products/melamine-ornate-48d0a3778d70.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/rope-handle.html</loc><image:image><image:loc>https://woodela.com/assets/products/rope-handle-ea5bd8e4dbc0.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/steel-pattern.html</loc><image:image><image:loc>https://woodela.com/assets/products/steel-pattern-935e39651fdd.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/breakfast-mosaic.html</loc><image:image><image:loc>https://woodela.com/assets/products/breakfast-mosaic-691bf92210da.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/breakfast-metal.html</loc><image:image><image:loc>https://woodela.com/assets/products/breakfast-metal-ae7193e4e822.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/snack-small.html</loc><image:image><image:loc>https://woodela.com/assets/products/snack-small-2e0017a86774.webp</image:loc></image:image></url>
+  <url><loc>https://woodela.com/products/tissues.html</loc><image:image><image:loc>https://woodela.com/assets/products/tissues-07f6f9f8208b.webp</image:loc></image:image></url>
 </urlset>
