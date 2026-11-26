@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
-
+Disallow: /woodela-review.html
+Disallow: /woodela-qa.html
+Disallow: /woodela-orders-qa.html
 Sitemap: https://woodela.com/sitemap.xml
